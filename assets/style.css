@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navegación - Ajustado para moverlo más a la izquierda */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  background-color: #f26704;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem; /* Añadido para separar del borde izquierdo */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: -20px; /* Ajuste para mover el menú más a la izquierda */
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  margin-top: 0px;
+  height: 110vh;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* asegura que siempre llene el contenedor */
+  object-position: center; /* centra la parte importante de la imagen */
+}
+
+.slides {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+.caption {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejor legibilidad */
+}
+
+/* Sections */
+section { 
+  padding: 60px 20px; 
+  max-width: 1000px; 
+  margin: auto; 
+}
+
+h2 { 
+  text-align: center; 
+  font-size: 2rem; 
+  margin-bottom: 40px; 
+}
+
+/* Para centrar las tarjetas en ambas secciones */
+#services .grid,
+#products .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#services .card,
+#products .card {
+  flex: 0 0 calc(25% - 20px);
+  max-width: 250px;
+  background: #f9f9f9; 
+  border-radius: 12px; 
+  padding: 20px; 
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  transition: transform 0.3s;
+}
+
+#services .card:hover,
+#products .card:hover { 
+  transform: translateY(-5px); 
+}
+
+.card img { 
+  width: 100%; 
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; 
+  margin-bottom: 15px; 
+}
+
+.price { 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  color: #00b894; 
+}
+
+/* Contacto */
+.contact { 
+  text-align: center; 
+}
+
+form { 
+  max-width: 500px; 
+  margin: 20px auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+input, textarea { 
+  padding: 12px; 
+  border-radius: 8px; 
+  border: 1px solid #ccc; 
+  font-size: 1rem; 
+  font-family: inherit; 
+}
+
+.btn {
+  display: inline-block; 
+  background: #00b894; 
+  color: white;
+  padding: 12px 24px; 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight: 600;
+  transition: background 0.3s; 
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover { 
+  background: #019875; 
+}
+
+/* Footer */
+footer { 
+  background: #222; 
+  color: #eee; 
+  text-align: center; 
+  padding: 30px 20px; 
+}
+
+footer a { 
+  color: #00b894; 
+  text-decoration: none; 
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar { 
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  
+  .nav-links { 
+    flex-direction: column; 
+    gap: 10px; 
+    margin-top: 10px; 
+    margin-left: 0;
+  }
+  
+  .carousel { 
+    height: 60vh; 
+  }
+  
+  .carousel img { 
+    height: 60vh; 
+  }
+  
+  #services .card,
+  #products .card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 300px;
+  }
+  
+  .caption {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #services .card,
+  #products .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .caption {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+}
