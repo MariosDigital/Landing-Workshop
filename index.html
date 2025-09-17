@@ -117,14 +117,14 @@
   </div>
 </section>
 
-  <!-- Contact -->
+   <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Need help? Write to us and we will respond as soon as possible.</p>
-    <form>
-      <input type="text" placeholder="Your name" required />
-      <input type="email" placeholder="Your email" required />
-      <textarea rows="5" placeholder="Your message" required></textarea>
+    <form name="contact" netlify>
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
       <button type="submit" class="btn">Send</button>
     </form>
     <p>Or write to us directly via <a href="https://wa.me/521234567890" target="_blank">WhatsApp</a>.</p>
@@ -133,9 +133,12 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mario's Digital. All rights reserved.</p>
-    <p><a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a> | Phone: +52 123 456 7890</p>
+    <p>
+      <a href="mailto:contacto@mariosdigital.com">contacto@mariosdigital.com</a> | 
+      <a href="https://wa.me/521234567890" target="_blank">Contact via WhatsApp</a>
+    </p>
   </footer>
 
-  <script src="assets/script.js"></script>
+   <script src="assets/script.js"></script>
 </body>
 </html>
