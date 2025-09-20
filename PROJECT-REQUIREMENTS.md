@@ -1,0 +1,19 @@
+# Mario's Digital - Project Requirements
+
+## Technologies Used
+This project uses only standard web technologies (HTML, CSS, JavaScript) and does not require any external dependencies or packages.
+
+## Deployment Platform
+netlify.com
+
+## Browser Support
+- Chrome (last 2 versions)
+- Firefox (last 2 versions) 
+- Safari (last 2 versions)
+- Edge (last 2 versions)
+
+## Optional (for future enhancements)
+If adding backend functionality later, consider:
+- Netlify Functions
+- Firebase
+- Form handling service
