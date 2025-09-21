@@ -467,3 +467,83 @@ footer a:hover {
     width: 100%;
   }
 }
+
+/* Botón de WhatsApp Flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-link:hover {
+  background-color: #128c7e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-text {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    right: 15px;
+  }
+  
+  .whatsapp-link {
+    padding: 10px 16px;
+  }
+  
+  .whatsapp-text {
+    font-size: 12px;
+  }
+  
+  .whatsapp-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Para tablets */
+@media (max-width: 1024px) {
+  .whatsapp-float {
+    bottom: 22px;
+    right: 20px;
+  }
+}
